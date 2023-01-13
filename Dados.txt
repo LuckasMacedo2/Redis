@@ -1,0 +1,44 @@
+set "jogo:20-05-2020:futebol:sao paulo x palmeiras:resultado" "2 x 1"
+set "jogo:20-06-2020:futebol:sao paulo x fluminense:resultado" "3 x 2"
+set "jogo:20-07-2020:futebol:flamengo x fluminense:resultado" "2 x 2"
+
+mset "jogo:20-05-2020:futebol:sao paulo x palmeiras:resultado" "2 x 1" "jogo:20-06-2020:futebol:sao paulo x fluminense:resultado" "3 x 2"  "jogo:20-07-2020:futebol:flamengo x fluminense:resultado" "2 x 2"
+
+mset "resultado:17-09-2020:megasena" "01 02 03 04 05 06" "resultado:12-09-2020:megasena" "01 02 03 04 05 07" "resultado:15-09-2020:megasena" "01 02 03 04 56 06"
+
+setbit click:22-10-2021 10 1
+setbit click:22-10-2021 11 1
+setbit click:23-10-2021 11 1
+
+-- Filas
+lpush ultimas-noticias "Restaurante paga bônus"
+lpush ultimas-noticias "Aulas em promoção"
+lpush ultimas-noticias "Batata batata"
+lpush ultimas-noticias "Limao" "Feijao" "Arroz" "Macarrao"
+
+rpush fila:caixa 01
+rpush fila:caixa 02
+rpush fila:caixa 03
+rpush fila:caixa 04
+
+-- Conjuntos
+SADD relacionamentos:lucas daniela
+SADD relacionamentos:lucas catarina
+SADD relacionamentos:lucas sophia vitor
+
+-- hash
+hset jogador:01 nome Lucas 
+hset jogador:01 pontos 100
+hset jogador:02 nome Danny 
+hset jogador:02 pontos 2000
+hgetall jogador:01
+
+-- Set
+zadd pontos 10000 Lucas
+zadd pontos 1000 Jose
+zadd pontos 50 John
+zadd pontos 2500 Batata
+zadd pontos 500 Arroz
+
+
+SADD relacionamentos:daniela vitor clayton joana
