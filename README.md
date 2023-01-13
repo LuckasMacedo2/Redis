@@ -3,8 +3,8 @@ Repositório com estudos sobre Redis
 O Redis é um armazenamento de dados na estrutura chave-valor
 
 # Comandos
-	'''echo - cliente manda o echo para o servidor que retorna o que foi enviado para o cliente. Não salva a informação no redis
-		echo "Hello World"'''
+	echo -> cliente manda o echo para o servidor que retorna o que foi enviado para o cliente. Não salva a informação no redis
+		echo "Hello World"
 	set key value -> salva um registro key-value no redis. Salva um conjunto de dados
 		set total 10
 	get key -> recupara a informação salva com o set
